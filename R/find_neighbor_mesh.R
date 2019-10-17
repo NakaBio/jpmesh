@@ -54,7 +54,7 @@ find_neighbor_mesh <- function(meshcode = NULL, contains = TRUE) {
           else if (grepl("7[1-6]$", meshcode))
             c(-1, 0, 1, 9929, 9930, 9931, -11, -10, -9)    
       }} else
-        res <- meshcode + c(9, 10, 11, -1, 1, -9, -10, -11)
+        res <- meshcode + c(9, 10, 11, -1, 0, 1, -9, -10, -11)
     # Must be ends 1-7
     res <- unique(res[grepl("[8-9]$", res) == FALSE])  
   } else if (size == units::as_units(1, "km")) {
